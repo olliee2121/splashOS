@@ -3,19 +3,19 @@ import sys
 
 def main():
     if len(sys.argv) < 2:
-        print("SplashOS System Control (sctrl) v24.0 - Apex Horizon")
-        print("Usage: sctrl [apex-boost | flow-status | vault-sync | support-scan]")
+        print("SplashOS System Control (sctrl) v25.0 - OmniDeploy")
+        print("Usage: sctrl [omni-build | switch-tool | app-install | support-scan]")
         sys.exit(1)
         
     cmd = sys.argv[1]
-    if cmd == "apex-boost":
-        print("[sctrl] Engaging Apex Horizon neural acceleration and automated micro-kernels...")
-    elif cmd == "flow-status":
-        print("[sctrl] Auditing SplashFlow active macro triggers and node states...")
-    elif cmd == "vault-sync":
-        print("[sctrl] Verifying SplashVault P2P peer connection matrix...")
+    if cmd == "omni-build":
+        print("[sctrl] Compiling cross-platform ISOs, EXEs, and APK packages...")
+    elif cmd == "switch-tool":
+        print("[sctrl] Initializing multi-OS Switch to SplashOS installer wizard...")
+    elif cmd == "app-install":
+        print("[sctrl] Deploying Splash apps across local ecosystem nodes...")
     elif cmd == "support-scan":
-        print("[sctrl] Launching SplashSupport Pro automated health checks...")
+        print("[sctrl] Launching SplashSupport Pro diagnostics...")
     else:
         print(f"Unknown command: {cmd}")
 
