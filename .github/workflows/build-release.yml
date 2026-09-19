@@ -1,0 +1,41 @@
+name: Build and Release SplashOS
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Run Build Script / Package Ecosystem
+        run: |
+          echo "Building SplashOS packages..."
+          mkdir -p build_output
+          # Create placeholder/mock build artifacts for your installers
+          echo "SplashOS ISO Installer Binary" > build_output/splashos-installer.iso
+          echo "Switch to SplashOS Tool Binary" > build_output/switch-to-splashos.exe
+          echo "Splash App Installer APK/EXE" > build_output/splash-app-installer.zip
+
+      - name: Create GitHub Release & Upload Assets
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v25.0-release
+          name: "SplashOS v25.0 OmniDeploy Release"
+          files: |
+            build_output/splashos-installer.iso
+            build_output/switch-to-splashos.exe
+            build_output/splash-app-installer.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
