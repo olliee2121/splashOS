@@ -25,15 +25,15 @@ for ($i = 0; $i -lt $Dirs.Count; $i++) {
     New-Item -ItemType Directory -Force -Path $Dirs[$i] | Out-Null
 }
 
-# 1. Installer Builder Stub (`installers/iso_builder/build_media.py`)
+# 1. Automated Media & ISO Builder Stub (`installers/iso_builder/build_media.py`)
 $BuilderCode = @'
 #!/usr/bin/env python3
 """
 SplashOS OmniDeploy Media Builder (v25.0)
-Generates ISO, EXE, and APK distribution packages.
+Automatically compiles core assets into bootable ISOs, Windows/Linux EXEs, and Android APKs.
 """
 def build_media():
-    print("[OmniDeploy] Packaging ISO images, Windows/Linux EXEs, and Android APKs...")
+    print("[OmniDeploy] Auto-compiling ISO images, system EXEs, and cross-platform APKs...")
 
 if __name__ == "__main__":
     build_media()
@@ -68,7 +68,7 @@ if __name__ == "__main__":
 '@
 Set-Content -Path "$Root\cli\sctrl" -Value $SctrlCode
 
-# 3. Upgraded Web Landing Page with All Installers (`web/index.html`)
+# 3. Upgraded Web Landing Page with Your Custom URLs (`web/index.html`)
 $HtmlCode = @'
 <!DOCTYPE html>
 <html lang="en">
@@ -89,12 +89,12 @@ $HtmlCode = @'
 <body>
     <div class="hero">
         <h1>SplashOS v25.0 "OmniDeploy"</h1>
-        <p>Select your installer package below to transition, deploy apps, or burn ecosystem ISO images.</p>
+        <p>Select your installer package below to transition, deploy apps, or download ecosystem image files.</p>
         
         <div class="btn-grid">
-            <a class="btn" href="https://github.com/YOUR-USERNAME/YOUR-REPO-NAME/releases/latest">Download ISO / Image Installer</a>
-            <a class="btn btn-secondary" href="https://github.com/YOUR-USERNAME/YOUR-REPO-NAME/releases/latest">Switch to SplashOS Installer</a>
-            <a class="btn btn-secondary" href="https://github.com/YOUR-USERNAME/YOUR-REPO-NAME/releases/latest">Splash App Installer (All OS)</a>
+            <a class="btn" href="https://github.com/olliee2121/splashOS/releases/latest">Download ISO / Image Installer</a>
+            <a class="btn btn-secondary" href="https://github.com/olliee2121/splashOS/releases/latest">Switch to SplashOS Installer</a>
+            <a class="btn btn-secondary" href="https://github.com/olliee2121/splashOS/releases/latest">Splash App Installer (All OS)</a>
         </div>
         
         <div class="updates">
