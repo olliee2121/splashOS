@@ -4,115 +4,34 @@
     <meta charset="UTF-8">
     <title>SplashOS v25.0 OmniDeploy - Universal Installer Suite</title>
     <style>
-        :root {
-            --bg-primary: #0b0f19;
-            --bg-card: #1e1b4b;
-            --border-card: #4c1d95;
-            --accent: #a855f7;
-            --accent-hover: #9333ea;
-            --text-main: #ffffff;
-            --text-muted: #94a3b8;
-        }
-        body { 
-            background: var(--bg-primary); 
-            color: var(--text-main); 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
-            text-align: center; 
-            padding: 40px 20px; 
-            margin: 0;
-        }
-        .hero { 
-            max-width: 900px; 
-            margin: 0 auto; 
-        }
-        h1 {
-            font-size: 2.8rem;
-            margin-bottom: 10px;
-            background: linear-gradient(135deg, #c084fc, #a855f7, #6366f1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-        }
-        .btn-grid { 
-            display: flex; 
-            flex-wrap: wrap; 
-            justify-content: center; 
-            gap: 15px; 
-            margin-top: 30px; 
-        }
-        .btn { 
-            background: var(--accent); 
-            color: var(--text-main); 
-            padding: 15px 25px; 
-            border-radius: 10px; 
-            text-decoration: none; 
-            font-weight: bold; 
-            display: inline-block; 
-            transition: background 0.2s, transform 0.1s; 
-            box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
-        }
-        .btn:hover { 
-            background: var(--accent-hover); 
-            transform: translateY(-2px);
-        }
-        .btn-secondary { 
-            background: #312e81; 
-            border: 1px solid var(--border-card); 
-            box-shadow: 0 4px 12px rgba(49, 46, 129, 0.3);
-        }
-        .btn-secondary:hover { 
-            background: #3730a3; 
-        }
-        .updates { 
-            background: var(--bg-card); 
-            border: 1px solid var(--border-card); 
-            padding: 25px; 
-            border-radius: 12px; 
-            margin-top: 50px; 
-            text-align: left; 
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-        }
-        .updates h3 {
-            margin-top: 0;
-            color: #e2e8f0;
-            border-bottom: 1px solid var(--border-card);
-            padding-bottom: 10px;
-        }
-        .updates ul {
-            padding-left: 20px;
-            margin-bottom: 0;
-        }
-        .updates li {
-            margin-bottom: 10px;
-            color: #cbd5e1;
-        }
-        .updates strong {
-            color: #fff;
-        }
+        body { background: #0b0f19; color: #fff; font-family: -apple-system, BlinkMacSystemFont, sans-serif; text-align: center; padding: 40px; }
+        .hero { max-width: 900px; margin: 0 auto; }
+        .btn-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 30px; }
+        .btn { background: #a855f7; color: #fff; padding: 15px 25px; border-radius: 10px; text-decoration: none; font-weight: bold; display: inline-block; transition: background 0.2s; }
+        .btn:hover { background: #9333ea; }
+        .btn-secondary { background: #312e81; border: 1px solid #4c1d95; }
+        .btn-secondary:hover { background: #3730a3; }
+        .updates { background: #1e1b4b; border: 1px solid #4c1d95; padding: 20px; border-radius: 12px; margin-top: 40px; text-align: left; }
     </style>
 </head>
 <body>
     <div class="hero">
         <h1>SplashOS v25.0 "OmniDeploy"</h1>
-        <p>Select your package below to instantly download automated builds from GitHub Releases.</p>
+        <p>Select your installer package below to transition, deploy apps, or download ecosystem image files.</p>
         
         <div class="btn-grid">
-            <a class="btn" href="https://github.com/olliee2121/splashOS/releases/latest/download/splashos-installer.iso">Download ISO / Image Installer</a>
-            <a class="btn btn-secondary" href="https://github.com/olliee2121/splashOS/releases/latest/download/switch-to-splashos.exe">Switch to SplashOS Installer</a>
-            <a class="btn btn-secondary" href="https://github.com/olliee2121/splashOS/releases/latest/download/splash-app-installer.zip">Splash App Installer (All OS)</a>
+            <a class="btn" href="https://github.com/olliee2121/splashOS/releases/latest">Download ISO / Image Installer</a>
+            <a class="btn btn-secondary" href="https://github.com/olliee2121/splashOS/releases/latest">Switch to SplashOS Installer</a>
+            <a class="btn btn-secondary" href="https://github.com/olliee2121/splashOS/releases/latest">Splash App Installer (All OS)</a>
         </div>
         
         <div class="updates">
             <h3>OmniDeploy Release Highlights</h3>
             <ul>
-                <li><strong>ISO / Image Builder:</strong> Clean bootable installation media compiled automatically via GitHub Actions for bare-metal hardware.</li>
-                <li><strong>Switch to SplashOS Tool:</strong> Seamless dual-boot and migration installer executable (<code>.exe</code>) for Windows, Linux, and macOS transitions.</li>
-                <li><strong>Universal App Installer:</strong> Cross-platform application package runner deployed across desktop binaries and mobile archives.</li>
-                <li><strong>SplashFlow & Vaults:</strong> Built-in visual workflow automation and decentralized peer-to-peer sync engine.</li>
+                <li><strong>ISO / Image Builder:</strong> Clean bootable installation media for bare-metal hardware.</li>
+                <li><strong>Switch to SplashOS Tool:</strong> Seamless dual-boot and migration installer for Windows, Linux, and macOS.</li>
+                <li><strong>Universal App Installer:</strong> Cross-platform runner deployed across desktop executables (EXEs) and mobile APKs.</li>
+                <li><strong>SplashFlow & Vaults:</strong> Built-in visual automation and decentralized sync.</li>
             </ul>
         </div>
     </div>
